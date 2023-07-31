@@ -68,6 +68,7 @@ export class Home extends Component {
         return (
             <section className="container">
                 <div className="search-container">
+                    {/* caso o valor searchValue não seja vazio, seu valor é mostrado */}
                     {!!searchValue && (
                         <>
                             <h1>Search Value: {searchValue}</h1>
