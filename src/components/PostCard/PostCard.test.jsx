@@ -1,15 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import { PostCard } from '.';
-import { postCardPropsMock } from './mock';
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef */
+import { render, screen } from "@testing-library/react";
+import { PostCard } from ".";
+import { postCardPropsMock } from "./mock";
 
 const props = postCardPropsMock;
 
-describe('<PostCard />', () => {
-    it('should render PostCard correctly', () => {
-        render(<PostCard {...props}/>);
-        
-        expect(screen.getByAltText(/title 1/)).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /title 1/i})).toBeInTheDocument();
-        expect(screen.getByText('body 1')).toBeInTheDocument();
-    });
+describe("<PostCard />", () => {
+  it("should render PostCard correctly", () => {
+    render(<PostCard {...props} />);
+
+    expect(screen.getByAltText(/title 1/)).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /title 1/i }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("body 1")).toBeInTheDocument();
+  });
 });
